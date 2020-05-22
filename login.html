@@ -1,0 +1,106 @@
+<?php
+            $host = "localhost";
+            $dbUsername = "root";
+            $dbPassword = "0000";
+            $dbName = "demo";
+            mysql_connect($host, $dbUsername, $password);
+            mysql_select_db($dbName);
+            
+    if(isset($_POST['email'])) {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        
+        $sql = "select * from users where email='".$email."' AND password='".$password."'
+        limit 1";
+
+        $result = mysql_query($sql);
+
+        if(my_sql_rows($result)==1) {
+            echo "You have been Succesfully singed in!";
+            exit();
+        }
+        else {
+            echo "failed :/";
+            exit();
+        }
+    }
+
+
+    
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Document</title>
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+         crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="style.css" type="text/css" />
+      <script
+         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+         crossorigin="anonymous"
+      ></script>
+   </head>
+   <body>
+      <div class="modal-dialog text-center">
+         <div class="col-sm-9 main-section">
+            <div class="modal-content">
+               <div class="col-12 user-img">
+                  <img src="img/face.png" alt="" />
+               </div>
+               <div class="col-12 form-input">
+                  <form method="post" action="#">
+                     <div class="form-group">
+                        <input
+                           type="email"
+                           class="form-group"
+                           placeholder="Enter email"
+                           name="email"
+                           required
+                        />
+                     </div>
+                     <div class="form-group">
+                        <input
+                           type="password"
+                           class="form-group"
+                           placeholder="Enter password"
+                           name="password"
+                           required
+                        />
+                     </div>
+                     <button
+                        type="submit"
+                        class="btn btn-success"
+                        value="submit"
+                     >
+                        Login
+                     </button>
+                  </form>
+                  <div class="col-12 register">
+                     <a href="/ProjectTest/index.html"
+                        >Don't have an account ?</a
+                     >
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

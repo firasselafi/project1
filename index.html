@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Document</title>
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+         crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="style.css" type="text/css" />
+      <script
+         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+         crossorigin="anonymous"
+      ></script>
+   </head>
+   <body>
+      <div class="modal-dialog text-center">
+         <div class="col-sm-9 main-section">
+            <div class="modal-content">
+               <div class="col-12 user-img">
+                  <img src="img/face.png" alt="" />
+               </div>
+               <div class="col-12 form-input">
+                  <form method="post" action="insert.php">
+                     <div class="form-group">
+                        <input
+                           type="email"
+                           class="form-group"
+                           placeholder="Enter email"
+                           name="email"
+                           required
+                        />
+                     </div>
+                     <div class="form-group">
+                        <input
+                           type="password"
+                           class="form-group"
+                           placeholder="Enter password"
+                           name="password"
+                           required
+                        />
+                     </div>
+                     <div class="form-group select">
+                        <select class="form-control" name="state">
+                           <option value="" name="">Select State</option>
+                           <option value="Ariana" name="Ariana">Ariana</option>
+                           <option value="Beja" name="Beja">Beja</option>
+                           <option value="Ben Arous" name="Ben Arous"
+                              >Ben Arous</option
+                           >
+                           <option value="Bizert" name="Bizert">Bizert</option>
+                           <option value="Gabes" name="Gabes">Gabes</option>
+                           <option value="Gafsa" name="Gafsa">Gafsa</option>
+                           <option value="Jendouba" name="Jendouba"
+                              >Jendouba</option
+                           >
+                           <option value="Kairouan" name="Kairouan"
+                              >Kairouan</option
+                           >
+                           <option value="Kasserine" name="Kasserine"
+                              >Kasserine</option
+                           >
+                           <option value="Kebili" name="Kebili">Kebili</option>
+                           <option value="Kef" name="Kef">Kef</option>
+                           <option value="Mahdia" name="Mahdia">Mahdia</option>
+                           <option value="Manouba" name="Manouba"
+                              >Manouba</option
+                           >
+                           <option value="Mednine" name="Mednine"
+                              >Mednine</option
+                           >
+                           <option value="Monastir" name="Monastir"
+                              >Monastir</option
+                           >
+                           <option value="Nabeul" name="Nabeul">Nabeul</option>
+                           <option value="Sfax" name="Sfax">Sfax</option>
+                           <option value="Sidi Bouzid" name="Sidi Bouzid"
+                              >Sidi Bouzid</option
+                           >
+                           <option value="Siliana" name="Siliana"
+                              >Siliana</option
+                           >
+                           <option value="Sousse" name="Sousse">Sousse</option>
+                           <option value="Tataouine" name="Tataouine"
+                              >Tataouine</option
+                           >
+                           <option value="Tozeur" name="Tozeur">Tozeur</option>
+                           <option value="Tunis" name="Tunis">Tunis</option>
+                           <option value="Zaghouan" name="Zaghouan"
+                              >Zaghouan</option
+                           >
+                        </select>
+                     </div>
+                     <button
+                        type="submit"
+                        class="btn btn-success"
+                        value="submit"
+                     >
+                        Register
+                     </button>
+                  </form>
+                  <div class="col-12 register">
+                     <a href="/ProjectTest/login.html"
+                        >Already have account ?</a
+                     >
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
